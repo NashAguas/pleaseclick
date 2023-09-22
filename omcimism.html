@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ 
+  .moveable-button {
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
+</head>
+<body>
+    <center>
+    <h1>Crush mo ba ako?</h1>
+   
+   <button onclick="alert('Yieee I Love You Too<<33')">Opo</button>
+
+<button id="moveButton" class="moveable-button">Hindi</button>
+
+<script>
+ 
+  function moveButton() {
+    var button = document.getElementById("moveButton");
+    var newX = Math.random() * window.innerWidth;
+    var newY = Math.random() * window.innerHeight;
+    
+    button.style.left = newX + "px";
+    button.style.top = newY + "px";
+  }
+
+  
+  var button = document.getElementById("moveButton");
+  button.addEventListener("click", moveButton);
+</script>
+
+</body>
+</html>
+
